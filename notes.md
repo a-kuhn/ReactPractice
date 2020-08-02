@@ -37,14 +37,14 @@
 
 
 ### full stack folder organization:
-#### |-─ **project-name/**<br/>
+|-─ **project-name/**<br/>
 | |-─ .gitignore (*should add `node_modules`!*)<br/>
-#### | |-─ **client/**<br/>
+| |-─ **client/**<br/>
 | | |-─ node_modules/<br/>
 | | |-─ public/<br/>
 | | |-─ src/<br/>
 | | |-─ package.json (*front-end node project*)<br/>
-#### | |-─ **server/**<br/>
+| |-─ **server/**<br/>
 | | |-─ config/<br/>
 | | |-─ controllers/<br/>
 | | |-─ node_modules/<br/>
