@@ -35,7 +35,8 @@
 1. **in server terminal:** `nodemon server.js` to run server
 1. **in client terminal:** `npm start` to run react app
 
-#### full stack organization:
+
+### full stack organization:
     ├─ **project-name/**
     | ├─ .gitignore (*should add `node_modules`!*)
     | ├─ **client/**
