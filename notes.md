@@ -37,19 +37,19 @@
 
 
 ### full stack folder organization:
-|-─ **project-name/**<br/>
-| |-─ .gitignore (*should add `node_modules`!*)<br/>
-| |-─ **client/**<br/>
-| | |-─ node_modules/<br/>
-| | |-─ public/<br/>
-| | |-─ src/<br/>
-| | |-─ package.json (*front-end node project*)<br/>
-| |-─ **server/**<br/>
-| | |-─ config/<br/>
-| | |-─ controllers/<br/>
-| | |-─ node_modules/<br/>
-| | |-─ models/<br/>
-| | |-─ routes/<br/>
-| | |-─ .env<br/>
-| | |-─ server.js<br/>
-| |-─ package.json (*back-end node project*)<br/>
+> |-─ **project-name/**<br/>
+> | |-─ .gitignore (*should add `node_modules`!*)<br/>
+> | |-─ **client/**<br/>
+> | | |-─ node_modules/<br/>
+> | | |-─ public/<br/>
+> | | |-─ src/<br/>
+> | | |-─ package.json (*front-end node project*)<br/>
+> | |-─ **server/**<br/>
+> | | |-─ config/<br/>
+> | | |-─ controllers/<br/>
+> | | |-─ node_modules/<br/>
+> | | |-─ models/<br/>
+> | | |-─ routes/<br/>
+> | | |-─ .env<br/>
+> | | |-─ server.js<br/>
+> | |-─ package.json (*back-end node project*)<br/>
