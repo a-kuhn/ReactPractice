@@ -36,20 +36,20 @@
 1. **in client terminal:** `npm start` to run react app
 
 
-### full stack organization:
-    ├─ **project-name/**
-    | ├─ .gitignore (*should add `node_modules`!*)
-    | ├─ **client/**
-    | | ├─ node_modules/
-    | | ├─ public/
-    | | ├─ src/
-    | | ├─ package.json (*front-end node project*)
-    | ├─ **server/**
-    | | ├─ config/
-    | | ├─ controllers/
-    | | ├─ node_modules/
-    | | ├─ models/
-    | | ├─ routes/
-    | | ├─ .env
-    | | ├─ server.js
-    | ├─ package.json (*back-end node project*)
+### full stack folder organization:
+├─ **project-name/**
+| ├─ .gitignore (*should add `node_modules`!*)
+| ├─ **client/**
+| | ├─ node_modules/
+| | ├─ public/
+| | ├─ src/
+| | ├─ package.json (*front-end node project*)
+| ├─ **server/**
+| | ├─ config/
+| | ├─ controllers/
+| | ├─ node_modules/
+| | ├─ models/
+| | ├─ routes/
+| | ├─ .env
+| | ├─ server.js
+| ├─ package.json (*back-end node project*)
