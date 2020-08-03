@@ -46,6 +46,8 @@
     | | |-─ node_modules/
     | | |-─ public/
     | | |-─ src/
+    | | | |-─ views/
+    | | | |-─ components/
     | | |-─ package.json (*front-end node project*)
     | |-─ **server/**
     | | |-─ config/
