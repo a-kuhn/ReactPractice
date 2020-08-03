@@ -28,7 +28,7 @@
 1. install back-end dependencies, usually `npm i express mongoose cors`
     * your back-end () package.json should now show have these dependencies listed
 1. create a server folder `mkdir server`
-1. **open new terminal window**, navigate into proj directory
+1. **open new terminal window for creating client**, navigate into proj directory
 1. **in client terminal:** `npx create-react-app client` to create a client folder for your front-end react app
     1. install front-end dependencies, usually `npm i axios @reach/router`
     1. your front-end package.json (inside client folder) should now have these dependencies listed
