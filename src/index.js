@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* this is App.js */}
+    {/* the last step before rendering through ../public/index.html */}
     <App />
   </React.StrictMode>,
   document.getElementById('root')

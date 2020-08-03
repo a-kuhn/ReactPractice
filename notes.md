@@ -13,6 +13,7 @@
     1. app name cannot contain any capital letters
     1. this app is commonly named `client`...[see folder structure](#full-stack-organization)
 1. `cd **your-app's-name**`
+1. `code .` to open project in VS Code (*could create ./src/components/ & ./src/views/ now*)
 1. install dependencies, usually `npm i axios @reach/router`
 1. `npm start`
 1. if browser doesn't automatically open, go to http://localhost:3000 to see app running!
@@ -34,6 +35,8 @@
 1. create modularized back-end folder structure and files in server folder **<-- add link to back-end setup notes**
 1. **in server terminal:** `nodemon server.js` to run server
 1. **in client terminal:** `npm start` to run react app
+1. if you haven't already done so, open main project directory in VS Code
+1. add `./client/src/components/` & `./client/src/views/`
 
 
 ### full stack folder organization:
