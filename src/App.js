@@ -9,13 +9,14 @@ import logo from './logo.svg';
 // any styles here can be used in any component :) 
 import './App.css';
 
+// list all components & views needed
+
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
 function App() {
   return (
     <div className="App">
       {/* this is where all views and routes will be held */}
-      
 
       {/* this is all boilerplate that can be deleted */}
       {/* <header className="App-header">
