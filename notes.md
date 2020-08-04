@@ -74,6 +74,9 @@
 1. accept arbitrary inputs ([props](#props))
 1. return React elements describing what should appear on the screen
 1. can also be written as [ES6 Class](#class-components) that returns React element
+1. **components can have _children_**
+    1. elements (including other components!) that are within the 2 enclosing JSX tags
+    1. can be accessed in the component through `this.props.children`
 
 ### props
 1. short for properties
