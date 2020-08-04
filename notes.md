@@ -140,3 +140,19 @@ export default NameOfComponent;
 ```
 
 ### functional components
+
+
+### synthetic events
+1. custom approach to adding event listeners
+1. wraps browser's native elements and applies own event system, "Synthetic Events"
+1. event names are camelCased, not lowercased
+    `onclick` ==> `onClick`
+1. returning false will not work with any event to prevent bubbling
+    * must manually call `event.stopPropagation()` or `event.preventDefault()`
+1. because of how React 'pools' synthetic events, they can't be called asynchronously
+1. common events:
+    1. **onClick** - runs when element is clicked
+    1. **onChange** - runs when form input is changed
+    1. **onSubmit** - runs when form is submitted 
+    1. **onFocus** - runs when an element is given focus (clicked on or tabbed to)
+    1. **onBlur** - runs when an element loses focus (user clicked away)
