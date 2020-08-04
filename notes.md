@@ -66,13 +66,44 @@
     * `<div class="btn btn-primary">` ==> `<div className="btn btn-primary">`
 1. `htmlFor` replaces `for` attribute in form labels
     * `<label for="email">Email: </label>` ==> `<label htmlFor="email">Email: </label>`
+1. curly braces used to denote JavaScript expressions (strings, numbers, functions, & objects)
 
 ### components
-1. **A React component is defined by a function that returns a React Element**
+1. **A React component is defined by a [function](#functional-components) that returns a React Element**
 1. like JavaScript functions
-1. accept arbitrary inputs (props)
+1. accept arbitrary inputs ([props](#props))
 1. return React elements describing what should appear on the screen
-1. can also be written as ES6 Class that returns React element
+1. can also be written as [ES6 Class](#class-components) that returns React element
+
+### props
+1. short for properties
+1. **an empty object that is passed to _every_ React component by default**
+1. each attribute becomes a key in the props object
+    * accessed in component through `this.props.attributeName`
+1. to pass props down to component, add html attribute
+    * strings can be just inside quotes
+    * curly braces needed for numbers, functions, & objects
+    * `<ReactComponent prop1="testing prop1" prop2={ 44 } prop3={someFunction()} />`
+1. to access props in component, **must** use `this.props`
+    * _in component tag_:
+    * `<ComponentName firstName="Oscar" age={ 44 } />`
+    * _in component_:
+    * <h1>First Name: { this.props.firstName } </h1>
+    * <h1>Age: { this.props.age } </h1>
+    * _can also destructure props_:
+    '''
+    class ComponentName extends React.Component {
+        render(){
+            const {firstName, age } = this.props;
+            return (
+                <>
+                    <h1>First Name: { firstName } </h1>
+                    <h1>Age: { age } </h1>
+                </>
+            );
+        }
+    }
+    '''
 
 ### class components
 1. in order to be valid, a class component _**must**_:
@@ -99,3 +130,5 @@ class NameOfComponent extends Component{
 }
 export default NameOfComponent;
 ```
+
+### functional components
