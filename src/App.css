@@ -1,3 +1,9 @@
+#first-jsx {
+  text-align:left;
+  margin-left: 20px;
+}
+
+/* Boilerplate Styling */
 .App {
   text-align: center;
 }

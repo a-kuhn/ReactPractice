@@ -20,7 +20,7 @@ function App() {
 
       {/* First JSX: practice writing JSX */}
       {/* this is not great practice -- should be broken out into a component! */}
-      <div className="first-jsx">
+      <div id="first-jsx">
         <h1>Hello Dojo!</h1>
         <h3>Things I need to do:</h3>
         <ul>
