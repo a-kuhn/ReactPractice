@@ -66,3 +66,35 @@
     * `<div class="btn btn-primary">` ==> `<div className="btn btn-primary">`
 1. `htmlFor` replaces `for` attribute in form labels
     * `<label for="email">Email: </label>` ==> `<label htmlFor="email">Email: </label>`
+
+### components
+1. **A React component is defined by a function that returns a React Element**
+1. like JavaScript functions
+1. accept arbitrary inputs (props)
+1. return React elements describing what should appear on the screen
+1. can also be written as ES6 Class that returns React element
+
+### class components
+1. in order to be valid, a class component **must**:
+    1. have a name starting with a capital letter
+    1. extend React.Component
+        * `import {Component} from 'react';` at top of component file
+        * `class NameOfComponent extends Component {}`
+    1. have a render method that returns a React Element
+        * either: JSX
+        * or: React.createElement()
+using JSX:
+```
+import React, {Component} from 'react';
+...
+class NameOfComponent extends Component{
+    render() {
+        return {
+            <div>
+                <all the content this component should display>
+            </div>;
+        }
+    }
+}
+export default NameOfComponent;
+```
