@@ -86,7 +86,8 @@
     * `<ReactComponent prop1="testing prop1" prop2={ 44 } prop3={someFunction()} />`
 1. to access props in component, **must** use `this.props`
     * _in component tag_:
-    * `<ComponentName firstName="Oscar" age={ 44 } />`
+    `<ComponentName firstName="Oscar" age={ 44 } />`
+    
     * _in component_:
 
     ```
