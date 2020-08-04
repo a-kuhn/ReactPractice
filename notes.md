@@ -83,7 +83,8 @@
     1. have a render method that returns a React Element
         * either: JSX
         * or: React.createElement()
-using JSX:
+
+##### example using JSX:
 ```
 import React, {Component} from 'react';
 ...
