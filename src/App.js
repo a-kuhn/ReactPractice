@@ -18,6 +18,18 @@ function App() {
     <div className="App">
       {/* this is where all views and routes will be held */}
 
+      {/* First JSX: practice writing JSX */}
+      {/* this is not great practice -- should be broken out into a component! */}
+      <div className="first-jsx">
+        <h1>Hello Dojo!</h1>
+        <h3>Things I need to do:</h3>
+        <ul>
+          <li>Learn React</li>
+          <li>Climb Mt. Everest</li>
+          <li>Run a marathon</li>
+          <li>Feed the dogs</li>
+        </ul>
+      </div>
       {/* this is all boilerplate that can be deleted */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
