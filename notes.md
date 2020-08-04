@@ -95,19 +95,19 @@
     ```
     * _can also destructure props_:
 
-    '''
+    ```
     class ComponentName extends React.Component {
         render(){
             const {firstName, age } = this.props;
             return (
                 <>
-                    `<h1>First Name: { firstName } </h1>`
-                    `<h1>Age: { age } </h1>`
+                    <h1>First Name: { firstName } </h1>
+                    <h1>Age: { age } </h1>
                 </>
             );
         }
     }
-    '''
+    ```
 
 ### class components
 1. in order to be valid, a class component _**must**_:
