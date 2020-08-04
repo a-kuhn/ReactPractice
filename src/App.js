@@ -10,13 +10,22 @@ import logo from './logo.svg';
 import './App.css';
 
 // list all components & views needed
+import PersonCard from './components/PersonCard.jsx';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
 function App() {
   return (
     <div className="App">
-      {/* this is where all views and routes will be held */}
+      {/* this is where all views, components, and routes will be held */}
+
+      <div id="passing-props">
+        {/* creating 4 PersonCard components, passing props for each */}
+        <PersonCard firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
+        <PersonCard firstName="John" lastName="Smith" age={88} hairColor="Brown" />
+        <PersonCard firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown" />
+        <PersonCard firstName="Maria" lastName="Smith" age={62} hairColor="Brown" />
+      </div>
 
       {/* First JSX: practice writing JSX */}
       {/* this is not great practice -- should be broken out into a component! */}
@@ -30,6 +39,9 @@ function App() {
           <li>Feed the dogs</li>
         </ul>
       </div>
+
+
+
       {/* this is all boilerplate that can be deleted */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
