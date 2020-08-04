@@ -75,7 +75,7 @@
 1. can also be written as ES6 Class that returns React element
 
 ### class components
-1. in order to be valid, a class component **must**:
+1. in order to be valid, a class component _**must**_:
     1. have a name starting with a capital letter
     1. extend React.Component
         * `import {Component} from 'react';` at top of component file
