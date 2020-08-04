@@ -4,7 +4,7 @@
 `<script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>`<br/>
 `<script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>`<br/>
 
-### can use JSX in [.html](https://github.com/a-kuhn/react-practice/blob/master/reactInHtml.html) files by adding Babel with following `<script>` tag:
+### can use [JSX](#JSX-notes) in [.html](https://github.com/a-kuhn/react-practice/blob/master/reactInHtml.html) files by adding Babel with following `<script>` tag:
 `<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>`<br/>
 
 ## TO CREATE REACT APP (client side only :upside_down_face: full stack below):
@@ -58,3 +58,11 @@
     | | |-─ .env
     | | |-─ server.js
     | |-─ package.json (*back-end node project*)
+
+### JSX notes
+1. code being returned **must** exist inside a single JSX element
+    * can enclose everything in `<div></div>` or just `<></>`
+1. `className` replaces `class` attribute
+    * `<div class="btn btn-primary">` ==> `<div className="btn btn-primary">`
+1. `htmlFor` replaces `for` attribute in form labels
+    * `<label for="email">Email: </label>` ==> `<label htmlFor="email">Email: </label>`
