@@ -88,9 +88,13 @@
     * _in component tag_:
     * `<ComponentName firstName="Oscar" age={ 44 } />`
     * _in component_:
-    * <h1>First Name: { this.props.firstName } </h1>
-    * <h1>Age: { this.props.age } </h1>
+
+    ```
+    <h1>First Name: { this.props.firstName } </h1>
+    <h1>Age: { this.props.age } </h1>
+    ```
     * _can also destructure props_:
+    
     '''
     class ComponentName extends React.Component {
         render(){
