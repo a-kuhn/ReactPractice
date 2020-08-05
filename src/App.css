@@ -1,3 +1,7 @@
+.outline {
+  outline: 4px solid purple;
+}
+
 #first-jsx {
   text-align:left;
   margin-left: 20px;

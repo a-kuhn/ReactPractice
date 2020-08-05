@@ -10,7 +10,8 @@ import logo from './logo.svg';
 import './App.css';
 
 // list all components & views needed
-import PersonCard from './components/PersonCard.jsx';
+import PersonCard from './components/PersonCard';
+import LightSwitch from './components/LightSwitch';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -19,13 +20,16 @@ function App() {
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
 
+      {/* using state in a class component to flip a LightSwitch on/off */}
+      <LightSwitch />
+
       {/* 
       example of a synthetic event: 
       an alert will pop up in the browser when this button is clicked
       */}
-      <button onClick={ () => alert("You clicked the button!")} className="btn btn-warning my-4">Click Me</button>
+      <button onClick={ () => alert("You clicked the button!")} className="outline btn btn-warning my-4">Click Me</button>
 
-      <div id="passing-props">
+      <div id="passing-props" className="outline">
         {/* creating 4 PersonCard components, passing props for each */}
         <PersonCard firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
         <PersonCard firstName="John" lastName="Smith" age={88} hairColor="Brown" />
