@@ -131,7 +131,7 @@ class NameOfComponent extends Component{
     render() {
         return {
             <div>
-                <all the content this component should display>
+                <all the content that this component should display>
             </div>;
         }
     }
@@ -140,6 +140,37 @@ export default NameOfComponent;
 ```
 
 ### functional components
+1. can use arrow function
+1. can accept arguments, like props
+1. doesn't need render method
+1. doesn't use constructor to set state
+1. will now use hooks
+1. still have to export Component
+
+#### 2 options using JSX:
+```
+import React from 'react';
+...
+const ComponentName = (props) => {
+    return(
+        <div>
+            <all the content that this component should display>
+        </div>
+    );
+}
+export default ComponentName;
+```
+```
+import React from 'react';
+...
+export default = (props) => {
+    return(
+        <div>
+            <all the content that this component should display>
+        </div>
+    );
+}
+```
 
 
 ### synthetic events
