@@ -2,21 +2,36 @@
 
 import React, {Component} from 'react';
 
-class PersonCard extends Component {
+class PersonCardBirthday extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            age: props.age,
+        };
+    }
+
+    // helper method for onClick:
+    increaseAge = () => {
+        this.setState({age: this.state.age+=1});
+    }
+
     render() {
-        // destructure props passed down:
-        const {firstName, lastName, age, hairColor } = this.props;
+        // destructure props:
+        const {firstName, lastName, hairColor } = this.props;
         return (
             <div>
                 <h1>{lastName}, {firstName}</h1>
-                <h4>Age: {age}</h4>
+                {/* displaying age from state, not props! so that value will update with every click */}
+                <h4>Age: {this.state.age}</h4>
                 <h4>Hair Color: {hairColor}</h4>
+                <button onClick={this.increaseAge} className="btn btn-secondary">Birthday Button for {firstName}</button>
             </div>
         );
     }
 }
 
-export default PersonCard;
+export default PersonCardBirthday;
 
 {/*
 TODO: Create a component called PersonCard that accepts the following props: 
