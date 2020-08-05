@@ -254,8 +254,22 @@ export default App;
         ```
 
 1. functional component: state is set with useState hook
-    * 
-    * 
+    * need `import { useState } from 'react';`
+    * organizationally, I like to see it high up in component file, like right under `export default (props) => {`
+    * define 2 variables by calling useState() and passing in default values:
+        **_can pass object to useState, similar to setting state in constructor of class component_**
+        ```
+        const [state, setState] = useState({
+            attribute1: value,
+            attribute2: value,
+            etc,
+        });
+        ```
+        **_ALTERNATIVELY, can pass primitive values and update individually_**:
+        ```
+        const [attribute1, setAttribute1] = useState(value);
+        const [attribute2, setAttribute2] = useState(value);
+        ```
 
 
 ### component lifecycle
