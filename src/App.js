@@ -19,6 +19,12 @@ function App() {
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
 
+      {/* 
+      example of a synthetic event: 
+      an alert will pop up in the browser when this button is clicked
+      */}
+      <button onClick={ () => alert("You clicked the button!")} className="btn btn-warning my-4">Click Me</button>
+
       <div id="passing-props">
         {/* creating 4 PersonCard components, passing props for each */}
         <PersonCard firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
