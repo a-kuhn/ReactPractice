@@ -9,7 +9,11 @@ export default () => {
 
     // helper method for onSubmit handler
     const createLocation = (e) => {
+        //prevents refreshing page & losing form input!
         e.preventDefault();
+
+        // create newLocation object from form input values
+        // shorthand for {address: address, city: city, ... etc.}
         const newLocation = { address, city, county, state };
         console.log(`newLocation: 
             \n${newLocation.address}
