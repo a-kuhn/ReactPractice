@@ -12,6 +12,7 @@ import './App.css';
 // list all components & views needed
 import PersonCard from './components/PersonCard';
 import LightSwitch from './components/LightSwitch';
+import PersonCardBirthday from './components/PersonCardBirthday';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -19,6 +20,14 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+      {/* using synthetic event & state to update value of prop from component */}
+      <div id="events-state-props" className="outline">
+        {/* creating 4 PersonCard components, passing props for each */}
+        <PersonCardBirthday firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
+        <PersonCardBirthday firstName="John" lastName="Smith" age={88} hairColor="Brown" />
+        <PersonCardBirthday firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown" />
+        <PersonCardBirthday firstName="Maria" lastName="Smith" age={62} hairColor="Brown" />
+      </div>
 
       {/* using state in a class component to flip a LightSwitch on/off */}
       <LightSwitch />

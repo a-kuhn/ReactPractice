@@ -26,4 +26,6 @@ TODO: Create a component called PersonCard that accepts the following props:
 4. hairColor
 
 Then, display four PersonCard components that show four different people, using props.
+
+Lastly, create a birthday button that will increase one person's age by one
 */}
