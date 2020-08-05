@@ -223,4 +223,38 @@ export default App;
         ```
 
 1. functional component: state is set with useState hook
-1. 
+    * 
+    * 
+
+
+### component lifecycle
+1. all components (functional & class) go throught a lifecycle from time of creation until time of destruction -- referred to as **component lifecycle**
+1. split into 3 stages, each with its own methods that run in specific order
+1. lifecycle methods are easily accessible in class components
+1. methods are automatically called in the background
+1. **3 STAGES:**
+    1. **Mounting** when React creates and inserts component into DOM
+        * constructor()
+            1. where state is assigned & event handlers are bound
+            1. React then sets default initial values for component's props & state
+            1. first method called before component is actually mounted to DOM
+            1. **_not where to make API calls or introduce subscriptions_**
+        * render()
+            1. where html content is processed and rendered
+        * componentDidMount()
+            1. immediately follows completion of render()
+            1. where to initiate network requests, subscriptions, timers, or target a DOM node from the component tree
+    1. **Updating** runs every time component state or props are updated
+        * shouldComponentUpdate(nextProps, nextState)
+            1. allows us to explicitly tell React whether to re-render component after change in state or props
+            1. used to optimize performance
+            1. returns true by default
+        * render()
+            1. runs (or doesn't) depending on return value of shouldComponentUpdate()
+        * componentDidUpdate(prevProps)
+            1. return of previous method becomes third arg for this method
+            1. allows us to compare prevProps, prevState, & snapshot value that was just returned
+    1. **Unmounting** when React unmounts and removes component from DOM
+        * componentWillUnmount()
+            1. invoked right before component is unmounted
+            1. ideal place to cancel on-going network requests, subscriptions, & clear timers
