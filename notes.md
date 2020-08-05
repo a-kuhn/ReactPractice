@@ -156,7 +156,7 @@ export default NameOfComponent;
     1. **onSubmit** - runs when form is submitted 
     1. **onFocus** - runs when an element is given focus (clicked on or tabbed to)
     1. **onBlur** - runs when an element loses focus (user clicked away)
-    
+
 **_example_**:
 an alert box will pop up in the browser when this button is clicked
 
@@ -174,3 +174,53 @@ export default App;
 ```
 
 ### state
+1. allows React Components to store their own data
+1. class component: 
+    * state is set in constructor()
+    * state **must** be declared as an object
+    * is immutable
+    * must use `setState()` to change value associated with specific state key
+
+        ````
+        import React, { Component } from 'react';
+                    
+        class LightSwitch extends Component {
+            // when using state, class now needs constructor() method:
+            constructor(props) {
+                // because inheriting React.Component, need to call super(props):
+                super(props);
+
+                // state declared as an object where
+                // key: value == attribute: data
+                this.state = {
+                    position: "On"
+                };
+            }
+
+            // helper method for onClick light switch
+            flipSwitch = () => {
+                if(this.state.position == "On") {
+                    this.setState({position: "Off"});
+                } else {
+                    this.setState({position: "On"});
+                }
+            }
+            
+            render() {
+                return (
+                    <fieldset>
+                        // can access state and display current light switch position:
+                        <p>The light is currently { this.state.position }</p>
+
+                        // use helper method, flipSwitch(), from above to update state with button click
+                        <button onClick={ this.flipSwitch() }>Flip Switch</button>
+                    </fieldset>
+                );
+            }
+        }
+                        
+        export default LightSwitch;
+        ```
+
+1. functional component: state is set with useState hook
+1. 
