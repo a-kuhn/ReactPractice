@@ -24,7 +24,7 @@ class LightSwitch extends Component {
     
     render() {
         return (
-            <div className="outline">
+            <div>
                 {/* can access state and display current light switch position: */}
                 <p>The light is currently { this.state.position }</p>
 

@@ -13,6 +13,7 @@ import './App.css';
 import PersonCard from './components/PersonCard';
 import LightSwitch from './components/LightSwitch';
 import PersonCardBirthday from './components/PersonCardBirthday';
+import RefactorPersonCard from './components/RefactorPersonCard';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -20,33 +21,42 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+      {/* using functional component to create person cards */}
+      <div id="functional-component" className="outline">
+        <h4 className="separator"> creating 4 PersonCard FUNCTIONAL components, passing props for each</h4>
+        <RefactorPersonCard firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
+        <RefactorPersonCard firstName="John" lastName="Smith" age={88} hairColor="Brown" />
+        <RefactorPersonCard firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown" />
+        <RefactorPersonCard firstName="Maria" lastName="Smith" age={62} hairColor="Brown" />
+      </div>
+
       {/* using synthetic event & state to update value of prop from component */}
       <div id="events-state-props" className="outline">
-        {/* creating 4 PersonCard components, passing props for each */}
+        <h4 className="separator">creating 4 PersonCard components, passing props for each</h4>
         <PersonCardBirthday firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
         <PersonCardBirthday firstName="John" lastName="Smith" age={88} hairColor="Brown" />
         <PersonCardBirthday firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown" />
         <PersonCardBirthday firstName="Maria" lastName="Smith" age={62} hairColor="Brown" />
       </div>
 
-      {/* using state in a class component to flip a LightSwitch on/off */}
-      <LightSwitch />
+      <div className="outline">
+        <h4 className="separator">using state in a class component to flip a LightSwitch on/off</h4>
+        <LightSwitch />
+      </div>
 
-      {/* 
-      example of a synthetic event: 
-      an alert will pop up in the browser when this button is clicked
-      */}
+      <h4 className="separator">example of a synthetic event:</h4>
+      <h6>an alert will pop up in the browser when this button is clicked</h6>
       <button onClick={ () => alert("You clicked the button!")} className="outline btn btn-warning my-4">Click Me</button>
 
       <div id="passing-props" className="outline">
-        {/* creating 4 PersonCard components, passing props for each */}
+        <h4 className="separator">creating 4 PersonCard components, passing props for each</h4>
         <PersonCard firstName="Jane" lastName="Doe" age={45} hairColor="Black" />
         <PersonCard firstName="John" lastName="Smith" age={88} hairColor="Brown" />
         <PersonCard firstName="Millard" lastName="Fillmore" age={50} hairColor="Brown" />
         <PersonCard firstName="Maria" lastName="Smith" age={62} hairColor="Brown" />
       </div>
 
-      {/* First JSX: practice writing JSX */}
+      <h4 className="separator"> First JSX: practice writing JSX</h4>
       {/* this is not great practice -- should be broken out into a component! */}
       <div id="first-jsx">
         <h1>Hello Dojo!</h1>
