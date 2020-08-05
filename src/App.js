@@ -14,6 +14,7 @@ import PersonCard from './components/PersonCard';
 import LightSwitch from './components/LightSwitch';
 import PersonCardBirthday from './components/PersonCardBirthday';
 import RefactorPersonCard from './components/RefactorPersonCard';
+import FunctionalForm from './components/FunctionalForm';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -21,6 +22,12 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div id="functional-component-form">
+        <h4>form created with functional component. uses hooks and synthetic events: useState, onChange, onSubmit</h4>
+        <FunctionalForm />
+      </div>
+
       {/* using functional component to create person cards */}
       <div id="functional-component" className="outline">
         <h4 className="separator"> creating 4 PersonCard FUNCTIONAL components, passing props for each</h4>
