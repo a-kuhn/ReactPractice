@@ -156,6 +156,7 @@ export default NameOfComponent;
     1. **onSubmit** - runs when form is submitted 
     1. **onFocus** - runs when an element is given focus (clicked on or tabbed to)
     1. **onBlur** - runs when an element loses focus (user clicked away)
+    
 **_example_**:
 an alert box will pop up in the browser when this button is clicked
 
