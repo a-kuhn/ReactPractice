@@ -163,7 +163,7 @@ export default ComponentName;
 ```
 import React from 'react';
 ...
-export default = (props) => {
+export default (props) => {
     return(
         <div>
             <all the content that this component should display>
