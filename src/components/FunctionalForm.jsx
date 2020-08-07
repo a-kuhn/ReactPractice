@@ -7,6 +7,17 @@ export default () => {
     const [county, setCounty] = useState("");
     const [state, setState] = useState("");
 
+    // adding some front end validation with conditional rendering
+    const [cityError, setCityError] = useState("");
+    const handleCity = (e) => {
+        setCity(e.target.value);
+        if(city.length < 1 ){
+            setCityError("City is required!");
+        }else if(city.length < 3){
+            setCityError("City must be at least 3 characters long!");
+        }
+    }
+
     // helper method for onSubmit handler
     const createLocation = (e) => {
         //prevents refreshing page & losing form input!
@@ -44,8 +55,13 @@ export default () => {
                     <input type="text" onChange={(e)=>setAddress(e.target.value)} value={address}/>
                 </div>
                 <div>
+                    {
+                        cityError ?
+                        <p className="validation-error">{cityError}</p> :
+                        ''
+                    }
                     <label>City: </label>
-                    <input type="text" onChange={(e)=>setCity(e.target.value)} value={city}/>
+                    <input type="text" onChange={handleCity} value={city}/>
                 </div>
                 <div>
                     <label>County: </label>
