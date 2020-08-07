@@ -56,48 +56,41 @@ export default () => {
 
     // build form:
     return(
-        <form className="container" onSubmit={onSubmitHandler}>
-            <div className="form-group text-left">
-                {
-                    firstNameError ? 
-                    <p className="validation-error">{firstNameError}</p> :
-                    ''
-                }
-                <input id="firstName" type="text" onChange={handleFirstName} value={firstName} className="form-control" placeholder="First Name"></input>
-            </div>
-            <div className="form-group text-left">
-                {
-                    lastNameError ? 
-                    <p className="validation-error">{lastNameError}</p> :
-                    ''
-                }
-                <input id="lastName" type="text" onChange={handleLastName} value={lastName} className="form-control" placeholder="Last Name"></input>
-            </div>
-            <div className="form-group text-left">
-                {
-                    emailError ? 
-                    <p className="validation-error">{emailError}</p> :
-                    ''
-                }
-                <input id="email" type="email" onChange={handleEmail} value={email} className="form-control" placeholder="Enter email"></input>
-            </div>
-            <div className="form-group text-left">
-                {
-                    pwError ? 
-                    <p className="validation-error">{pwError}</p> :
-                    ''
-                }
-                <input id="pw" type="password" onChange={handlePw} value={pw} className="form-control" placeholder="Enter password"></input>
-            </div>
-            <div className="form-group text-left">
-                {
-                    pwConfirmError ? 
-                    <p className="validation-error">{pwConfirmError}</p> :
-                    ''
-                }
-                <input id="pwConfirm" type="password" onChange={handlePwConfirm} value={pwConfirm} className="form-control" placeholder="Confirm password"></input>
-            </div>
-            <button type="submit" className="btn btn-primary">Register</button>
-        </form>
+        <div>
+            {JSON.stringify(state)}
+            <form className="container" onSubmit={onSubmitHandler}>
+                <div className="form-group text-left">
+                    {state.firstName.error != null && ( 
+                        <p className="validation-error">{state.firstName.error}</p>
+                    )}
+                    <input name="firstName" type="text" onChange={onChangeHandler} value={state.firstName} className="form-control" placeholder="First Name"></input>
+                </div>
+                <div className="form-group text-left">
+                    {state.lastName.error != null && ( 
+                        <p className="validation-error">{state.lastName.error}</p>
+                    )}
+                    <input name="lastName" type="text" onChange={onChangeHandler} value={state.lastName} className="form-control" placeholder="Last Name"></input>
+                </div>
+                <div className="form-group text-left">
+                    {state.email.error != null && ( 
+                        <p className="validation-error">{state.email.error}</p>
+                    )}
+                    <input name="email" type="email" onChange={onChangeHandler} value={state.email} className="form-control" placeholder="Enter email"></input>
+                </div>
+                <div className="form-group text-left">
+                    {state.pw.error != null && ( 
+                        <p className="validation-error">{state.pw.error}</p>
+                    )}
+                    <input name="pw" type="password" onChange={onChangeHandler} value={state.pw} className="form-control" placeholder="Enter password"></input>
+                </div>
+                <div className="form-group text-left">
+                    {state.pwConfirm.error != null && ( 
+                        <p className="validation-error">{state.pwConfirm.error}</p>
+                    )}
+                    <input name="pwConfirm" type="password" onChange={onChangeHandler} value={state.pwConfirm} className="form-control" placeholder="Confirm password"></input>
+                </div>
+                <button type="submit" className="btn btn-primary">Register</button>
+            </form>
+        </div>
     );
 }
