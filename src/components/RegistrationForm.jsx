@@ -59,7 +59,7 @@ export default () => {
     // when server is built out, this might include a POST request
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        const newUser = [firstName, lastName, email, pw];
+        const newUser = {firstName, lastName, email, pw};
 
         console.log(`newUser: 
             \n${newUser.firstName}
@@ -68,11 +68,12 @@ export default () => {
             \n${newUser.pw}`);
         
         // after successful creation of newUser, clear form inputs:
-        // also need value={stateVariable} in input tag below
+        // also need value={stateVariable} in input tag of form below
         setFirstName("");
         setLastName("");
         setEmail("");
         setPw("");
+        setPwConfirm("");
     }
 
     // build form:
