@@ -303,3 +303,10 @@ export default App;
         * componentWillUnmount()
             1. invoked right before component is unmounted
             1. ideal place to cancel on-going network requests, subscriptions, & clear timers
+
+### conditional rendering [example]()
+1. can add state variables & functions to component for conditional rendering
+1. use setState() in appropriate function to update state variable
+1. include appropriate JSX in return method to render desired content
+1. **_ALTERNATIVELY_** can use ternary operations directly in JSX
+1. popular use case: displaying validation messages
