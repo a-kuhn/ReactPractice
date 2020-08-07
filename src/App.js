@@ -15,6 +15,7 @@ import LightSwitch from './components/LightSwitch';
 import PersonCardBirthday from './components/PersonCardBirthday';
 import RefactorPersonCard from './components/RefactorPersonCard';
 import FunctionalForm from './components/FunctionalForm';
+import RegistrationForm from './components/RegistrationForm';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -22,6 +23,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">Registration form: useState hook, conditional rendering, synthetic events</h4>
+        <RegistrationForm />
+      </div>
 
       <div id="functional-component-form" className="outline">
         <h4 className="separator">form created with functional component. uses hooks and synthetic events: useState, onChange, onSubmit</h4>
