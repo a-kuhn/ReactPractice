@@ -23,8 +23,8 @@ function App() {
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
 
-      <div id="functional-component-form">
-        <h4>form created with functional component. uses hooks and synthetic events: useState, onChange, onSubmit</h4>
+      <div id="functional-component-form" className="outline">
+        <h4 className="separator">form created with functional component. uses hooks and synthetic events: useState, onChange, onSubmit</h4>
         <FunctionalForm />
       </div>
 

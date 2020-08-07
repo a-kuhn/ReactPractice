@@ -11,11 +11,11 @@ export default () => {
     const [cityError, setCityError] = useState("");
     const handleCity = (e) => {
         setCity(e.target.value);
-        if(city.length < 1 ){
+        if(e.target.value.length < 1 ){
             setCityError("City is required!");
-        }else if(city.length < 3){
+        }else if(e.target.value.length <= 2){
             setCityError("City must be at least 3 characters long!");
-        }
+        }else {setCityError("");}
     }
 
     // helper method for onSubmit handler
@@ -76,7 +76,7 @@ export default () => {
 
             <h5>real-time display of form data: </h5>
             <p>Address: {address}</p>
-            <p>City: {city}</p>
+            <p>City: {city} || City Length: {city.length}</p>
             <p>County: {county}</p>
             <p>State: {state}</p>
         </div>
