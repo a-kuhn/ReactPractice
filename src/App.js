@@ -27,7 +27,7 @@ function App() {
 
       <div className="outline">
         <h4 className="separator">Registration form: useReducer hook, conditional rendering, synthetic events</h4>
-        <UseReducerRegistrationForm />
+        {/* <UseReducerRegistrationForm /> */}
       </div>
 
       <div className="outline">

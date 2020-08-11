@@ -32,9 +32,8 @@ const reducer = (state, action) => {
 
 export default () => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    // console.log(`state: ${state.firstName.value}`);
+
     const onChangeHandler = (e) => {
-        console.log('********** onChangeHandler triggered...');
         const {name, value} = e.target;
         dispatch({
             type: name,
