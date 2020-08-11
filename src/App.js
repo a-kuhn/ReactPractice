@@ -18,6 +18,7 @@ import FunctionalForm from './components/FunctionalForm';
 import RegistrationForm from './components/RegistrationForm';
 import UseReducerRegistrationForm from './components/UseReducerRegistrationForm';
 import UsingMapMethod from './components/UsingMapMethod';
+import LiftingState from './components/LiftingState';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -25,6 +26,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">lifting state to create access for two components</h4>
+        <LiftingState />
+      </div>
 
       <div className="outline">
         <h4 className="separator">example of using .map() in JSX to create html</h4>
