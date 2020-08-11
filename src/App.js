@@ -17,6 +17,7 @@ import RefactorPersonCard from './components/RefactorPersonCard';
 import FunctionalForm from './components/FunctionalForm';
 import RegistrationForm from './components/RegistrationForm';
 import UseReducerRegistrationForm from './components/UseReducerRegistrationForm';
+import UsingMapMethod from './components/UsingMapMethod';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -24,6 +25,12 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">example of using .map() in JSX to create html</h4>
+        <UsingMapMethod propsArr={['one fish', 'two fish', 'red fish', 'blue fish']} />
+      </div>
+
 
       <div className="outline">
         <h4 className="separator">Registration form: useReducer hook, conditional rendering, synthetic events</h4>

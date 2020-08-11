@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-    // can create list inside component, or pass down from props:
+    // can create list inside component, or pass down from props (see below):
     const arr = ['bears','beets','battlestar gallactica'];
 
     return(
@@ -13,7 +13,7 @@ export default (props) => {
 
             {/* mapping over propsList */}
             <ul>
-                {props.arr.map((item, idx) => <li key={idx}>{item}</li>)}
+                {props.propsArr.map((item, idx) => <li key={idx}>{item}</li>)}
             </ul>
         </div>
     );
