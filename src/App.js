@@ -21,6 +21,7 @@ import UsingMapMethod from './components/UsingMapMethod';
 import LiftingState from './components/LiftingState';
 import BoxGenerator from './components/BoxGenerator';
 import ArgumentInCallback from './components/ArgumentInCallback';
+import Tabs from './components/Tabs';
 
 
 // this is where the rest of the app's code will point to
@@ -29,6 +30,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">component takes array of items (objects with 2 properties)</h4>
+        <Tabs />
+      </div>
 
       <div className="outline">
         <h4 className="separator">when your event handler needs more data than just the event, pass a callback</h4>
