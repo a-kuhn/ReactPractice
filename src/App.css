@@ -7,6 +7,13 @@
   margin-top: 20px;
 }
 
+.square-box {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  margin: 10px;
+}
+
 .validation-error {
   color: red;
   font-weight: 350;
