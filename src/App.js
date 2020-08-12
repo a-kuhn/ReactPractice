@@ -20,6 +20,8 @@ import UseReducerRegistrationForm from './components/UseReducerRegistrationForm'
 import UsingMapMethod from './components/UsingMapMethod';
 import LiftingState from './components/LiftingState';
 import BoxGenerator from './components/BoxGenerator';
+import ArgumentInCallback from './components/ArgumentInCallback';
+
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -27,6 +29,12 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">using callback functions with synthetic event handlers</h4>
+        <ArgumentInCallback />
+      </div>
+
       <div className="outline">
         <h4 className="separator">box generator: adding color to form should create new box of that color</h4>
         <BoxGenerator />
