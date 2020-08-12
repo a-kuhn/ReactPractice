@@ -22,6 +22,7 @@ import LiftingState from './components/LiftingState';
 import BoxGenerator from './components/BoxGenerator';
 import ArgumentInCallback from './components/ArgumentInCallback';
 import Tabs from './components/Tabs';
+import TodoList from './components/TodoList';
 
 
 // this is where the rest of the app's code will point to
@@ -30,6 +31,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">practice with checkboxes and ToDo lists</h4>
+        <TodoList />
+      </div>
 
       <div className="outline">
         <h4 className="separator">component takes array of items (objects with 2 properties)</h4>
