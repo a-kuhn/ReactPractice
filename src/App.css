@@ -7,6 +7,10 @@
   margin-top: 20px;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .square-box {
   display: inline-block;
   margin: 10px;

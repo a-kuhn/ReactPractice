@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 
 export default () => {
+    // set state for input box with isComplete set to false by default
+    const [currTodo, setCurrTodo] = useState({goal:'', isComplete:false});
+
+    // set state for todo list with dummy data for easier testing
     const [todos, setTodos] = useState([
         {goal:'walk dogs', isComplete: false},
         {goal:'go for a run', isComplete: false},
@@ -8,10 +12,8 @@ export default () => {
         {goal:'practice React', isComplete: false},
         {goal:'do dishes', isComplete: true},
     ]);
-
-    const [currTodo, setCurrTodo] = useState({goal:'', isComplete:false});
     
-    // onSubmitHandler -- add new todo to todos todo== {goal: '', isComplete: t/f}
+    // onSubmitHandler -- add new todo to todos todo== {goal: '', isComplete: f}
     const onSubmitHandler = (e) => {
         e.preventDefault();
         setTodos([...todos, currTodo]);
@@ -25,9 +27,9 @@ export default () => {
     }
 
     // isCompleteHandler
-    const isCompleteHandler = (e, idx) => {
-        e.preventDefault();
-        setTodos(!todos[idx].isComplete);
+    const isCompleteHandler = (idx) => {
+        todos[idx].isComplete = !todos[idx].isComplete;
+        setTodos([...todos]);
     }
 
     return(
@@ -47,9 +49,9 @@ export default () => {
                                 className="mx-2"
                                 type="checkbox" 
                                 checked={todo.isComplete}
-                                onChange={(e)=>isCompleteHandler(e,idx)}>
+                                onChange={()=>isCompleteHandler(idx)}>
                             </input>
-                            {todo.goal}
+                            <span className={todo.isComplete? `line-through` : ``}>{todo.goal}</span>
                             <button
                                 className="mx-2 btn-danger btn"
                                 onClick={(e)=>onDeleteHandler(e,todo.goal)}
