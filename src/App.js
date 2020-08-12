@@ -31,7 +31,7 @@ function App() {
       {/* this is where all views, components, and routes will be held */}
 
       <div className="outline">
-        <h4 className="separator">using callback functions with synthetic event handlers</h4>
+        <h4 className="separator">when your event handler needs more data than just the event, pass a callback</h4>
         <ArgumentInCallback />
       </div>
 
