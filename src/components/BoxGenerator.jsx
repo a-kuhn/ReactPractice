@@ -8,10 +8,7 @@ export default () => {
 
     // to add a new box to the list of boxes
     const addBox = (newBox) => {
-        console.log(`adding ${newBox} box to boxes`);
-        console.log(`each box in boxes is a ${typeof(newBox)}`);
         addNewBox([...boxes, newBox]);
-        console.log(`boxes: ${boxes}`);
     }
 
     return(

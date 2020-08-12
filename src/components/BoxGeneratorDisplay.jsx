@@ -6,7 +6,16 @@ export default ({boxes}) => {
         <div>
             <h6>display of boxes:</h6>
             {boxes.map((box, idx) => 
-                <div className="square-box" key={idx} style={{backgroundColor: box}}></div>
+                <div 
+                    className="square-box" 
+                    key={idx} 
+                    style={{
+                        backgroundColor: box.color,
+                        height: box.size+`px`,
+                        width: box.size+`px`
+                    }}
+                >
+                </div>
             )}
         </div>
     );
