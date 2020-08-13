@@ -7,16 +7,18 @@ export default () => {
 
     useEffect(() => 
         {axios.get('https://pokeapi.co/api/v2/pokemon?limit=808')
-            .then(res => setPokemon(res.data))
+            .then(res => setPokemon(res.data.results))
         },
         []
     );
+
+    console.log(pokemon);
     
     return(
         <div>
             <button onClick={()=>setIsClicked(!isClicked)}>Fetch Pokemon</button>
             <ul>
-                {isClicked ? pokemon.map((p, i) => <li key={i}>{p}</li>) : null}
+                {isClicked ? pokemon.map((p, i) => <li key={i}>{p.name}</li>) : null}
             </ul>
         </div>
     );

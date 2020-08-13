@@ -25,6 +25,7 @@ import Tabs from './components/Tabs';
 import TodoList from './components/TodoList';
 import Wrapper from './components/Context/Wrapper';
 import UseEffectAndFetch from './components/UseEffectAndFetch';
+import UseEffectAndAxios from './components/UseEffectAndAxios';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -32,6 +33,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">useEffect + axios() to make a call to pokemon API</h4>
+        <UseEffectAndAxios />
+      </div>
 
       <div className="outline">
         <h4 className="separator">useEffect + fetch() to make a call to pokemon API</h4>
