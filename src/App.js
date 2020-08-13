@@ -23,6 +23,7 @@ import BoxGenerator from './components/BoxGenerator';
 import ArgumentInCallback from './components/ArgumentInCallback';
 import Tabs from './components/Tabs';
 import TodoList from './components/TodoList';
+import ContextPractice from './components/Context/ContextPractice';
 
 
 // this is where the rest of the app's code will point to
@@ -31,6 +32,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">createContext: passing/accessing data through nested components without passing props</h4>
+        <ContextPractice />
+      </div>
 
       <div className="outline">
         <h4 className="separator">practice with checkboxes and ToDo lists</h4>
