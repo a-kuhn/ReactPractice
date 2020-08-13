@@ -2,25 +2,24 @@ import React, {useState, useEffect} from 'react';
 
 export default () => {
     const [pokemon, setPokemon] = useState([]);
+    let [isClicked, setIsClicked] = useState(false);
 
-    const onClickHandler = () => {
-        useEffect(() => {
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=808')
-                .then(res => res.json())
-                .then(res => setPokemon(res.results))
+    useEffect(() => {
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=808')
+        .then(res => res.json())
+        .then(res => setPokemon(res.results))
         }, []);
-    }
 
     return(
         <div className="container">
             <button 
                 className="btn btn-secondary"
-                onClick={onClickHandler}
+                onClick={() => setIsClicked(isClicked = !isClicked)}
             >Fetch Pokemon</button>
             <ul>
-                {pokemon.map((p, idx) => {
+                {isClicked ? pokemon.map((p, idx) => 
                     <li key={idx}>{p.name}</li>
-                })}
+                ) : null}
             </ul>
         </div>
     );
