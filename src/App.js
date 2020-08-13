@@ -23,7 +23,7 @@ import BoxGenerator from './components/BoxGenerator';
 import ArgumentInCallback from './components/ArgumentInCallback';
 import Tabs from './components/Tabs';
 import TodoList from './components/TodoList';
-import ContextPractice from './components/Context/ContextPractice';
+import Wrapper from './components/Context/Wrapper';
 
 
 // this is where the rest of the app's code will point to
@@ -35,7 +35,7 @@ function App() {
 
       <div className="outline">
         <h4 className="separator">createContext: passing/accessing data through nested components without passing props</h4>
-        <ContextPractice />
+        <Wrapper />
       </div>
 
       <div className="outline">
