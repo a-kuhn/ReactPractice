@@ -9,14 +9,12 @@ export default () => {
 
 
     return(
-
-        // <Router>
         <>
             <SearchForm />
-            <DisplayPeople />
-            <DisplayPlanets />
+            <Router>
+                <DisplayPeople path="/people/:id"/>
+                <DisplayPlanets path="/planets/:id"/>
+            </Router>
         </>
-        // </Router>
-
     );
 }

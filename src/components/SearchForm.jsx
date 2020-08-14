@@ -2,17 +2,23 @@ import React, {useState, useEffect} from 'react';
 import {Link, navigate} from '@reach/router';
 
 export default () => {
-    const [id, setId] = useState('');
+    const [resource, setResource] = useState('people');
+    const [id, setId] = useState(1);
 
-    const onSubmitHandler = () => {
-
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+        const searchId = id.toString();
+        navigate(`/${resource}/${searchId}`)
     }
 
     return(
-        <form className="form-inline container justify-content-center" >
+        <form className="form-inline container justify-content-center" onSubmit={onSubmitHandler}>
             <div className="form-group mb-2">
                 <label className="mx-2">Search for: </label>
-                <select id="peopleOrPlanets">
+                <select 
+                    value={resource}
+                    onChange={(e)=>{setResource(e.target.value)}}
+                >
                     <option>people</option>
                     <option>planets</option>
                 </select>
