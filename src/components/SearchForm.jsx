@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Link, navigate} from '@reach/router';
+import React, {useState} from 'react';
+import {navigate, Link} from '@reach/router';
 
 export default () => {
     const [resource, setResource] = useState('people');
@@ -8,10 +8,11 @@ export default () => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         const searchId = id.toString();
-        navigate(`/${resource}/${searchId}`)
+        navigate(`/${resource}/${searchId}`);
     }
 
     return(
+        <>
         <form className="form-inline container justify-content-center" onSubmit={onSubmitHandler}>
             <div className="form-group mb-2">
                 <label className="mx-2">Search for: </label>
@@ -32,6 +33,12 @@ export default () => {
                 ></input>
             </div>
             <button className="btn btn-primary">Search</button>
+        <Link 
+            to="/" 
+            onClick={(e)=>{setResource('people'); setId(1)}}
+            className="btn btn-warning d-inline-flex mx-2"
+        >Reset</Link>
         </form>
+        </>
     );
 }

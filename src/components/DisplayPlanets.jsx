@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {Link, navigate} from '@reach/router';
 import axios from 'axios';
 
 export default (props) => {
@@ -11,7 +10,7 @@ export default (props) => {
         axios.get(`https://swapi.dev/api/planets/${id}`)
             .then(res => {setPlanet(res.data)})
             .catch(err => setError(`these are not the drones you're lookng for`))
-    }, []);
+    }, [id]);
 
     return(
         <>{error.length > 0 ?
@@ -26,10 +25,10 @@ export default (props) => {
         ) : (
         <div>
             <h3>{planet.name}</h3>
-            <h6>Climate: <span className="h6">{planet.climate}</span></h6>
-            <h6>Terrain: <span className="h6">{planet.terrain}</span></h6>
-            <h6>Surface Water: <span className="h6">{planet.surface_water}</span></h6>
-            <h6>Population: <span className="h6">{planet.population}</span></h6>
+            <h4>Climate: <span className="h6">{planet.climate}</span></h4>
+            <h4>Terrain: <span className="h6">{planet.terrain}</span></h4>
+            <h4>Surface Water: <span className="h6">{planet.surface_water}</span></h4>
+            <h4>Population: <span className="h6">{planet.population}</span></h4>
         </div>)}
         </>
     );
