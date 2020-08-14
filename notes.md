@@ -14,7 +14,7 @@
     1. this app is commonly named `client`...[see folder structure](#full-stack-organization)
 1. `cd **your-app's-name**`
 1. `code .` to open project in VS Code (*could create ./src/components/ & ./src/views/ now*)
-1. install dependencies, usually `npm i axios @reach/router`
+1. install dependencies, usually `npm i axios @reach/router react-bootstrap bootstrap`
 1. `npm start`
 1. if browser doesn't automatically open, go to http://localhost:3000 to see app running!
 
