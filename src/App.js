@@ -1,6 +1,8 @@
 // 'react' allows us to write JSX
 // using .jsx files seems to help with VS Code's shortcuts & auto-formatting
 import React from 'react';
+// for routing:
+import {Router, Link} from '@reach/router';
 
 // not necessary if you're not using the included logo
 import logo from './logo.svg';
@@ -26,6 +28,8 @@ import TodoList from './components/TodoList';
 import Wrapper from './components/Context/Wrapper';
 import UseEffectAndFetch from './components/UseEffectAndFetch';
 import UseEffectAndAxios from './components/UseEffectAndAxios';
+import MainView from './views/MainView';
+import SecondaryView from './views/SecondaryView';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -33,6 +37,17 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      {/* to demonstrate routing: */}
+      <div className="outline">
+        <h4 className="separator">to check out some basic routing, go 
+          <Link to = "/main"> here</Link> <span className="h6 font-weight-light">(keep an eye on the address bar ^^)</span>
+        </h4>
+        <Router>
+          <MainView path="/main"/>
+          <SecondaryView path="/secondary"/>
+        </Router>
+      </div>
 
       <div className="outline">
         <h4 className="separator">useEffect + axios() to make a call to pokemon API</h4>
