@@ -30,6 +30,7 @@ import UseEffectAndFetch from './components/UseEffectAndFetch';
 import UseEffectAndAxios from './components/UseEffectAndAxios';
 import MainView from './views/MainView';
 import SecondaryView from './views/SecondaryView';
+import StarWars from './components/StarWars';
 
 // this is where the rest of the app's code will point to
 // this functional component is what gets rendered in index.js
@@ -37,6 +38,11 @@ function App() {
   return (
     <div className="App">
       {/* this is where all views, components, and routes will be held */}
+
+      <div className="outline">
+        <h4 className="separator">putting it all together!</h4>
+        <StarWars />
+      </div>
 
       {/* to demonstrate routing: */}
       <div className="outline">
