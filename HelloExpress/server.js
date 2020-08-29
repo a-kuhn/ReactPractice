@@ -49,7 +49,15 @@ app.put("/api/users/:id", (req, res) => {
   // replace prev object with req data:
   users[req.params.id] = req.body;
   // send response
-  res.json({status: ok});
+  res.json({status: "ok"});
+});
+
+// delete: delete data from db based on data passed through params
+app.delete("/api/users/:id", (req, res) => {
+  // this will look different when actually connected to db
+  users.splice(req.params.id, 1);
+  // respond with something:
+  res.json({status: "ok"});
 });
 
 const server = app.listen(port, () =>
