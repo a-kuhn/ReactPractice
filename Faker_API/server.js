@@ -26,9 +26,23 @@ class Company {
     }
 }
 
+// /api/companies/new ==> returns new User
 app.post("/api/users/new", (req, res) => {
     const newUser = new User();
     res.json({user: newUser});
+});
+
+// /api/companies/new ==> returns new Company
+app.post("/api/companies/new", (req, res) => {
+    const newCompany = new Company();
+    res.json({company: newCompany});
+});
+
+// /api/user/company ==> returns new User and new Company
+app.post("/api/users/new", (req, res) => {
+    const newUser = new User();
+    const newCompany = new Company();
+    res.json({user: newUser, company: newCompany});
 });
 
 app.listen(port, ()=>console.log(`Listening on port: ${port}`));
