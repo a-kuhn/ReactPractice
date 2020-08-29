@@ -39,7 +39,7 @@ app.post("/api/companies/new", (req, res) => {
 });
 
 // /api/user/company ==> returns new User and new Company
-app.post("/api/users/new", (req, res) => {
+app.post("/api/user/company", (req, res) => {
     const newUser = new User();
     const newCompany = new Company();
     res.json({user: newUser, company: newCompany});
