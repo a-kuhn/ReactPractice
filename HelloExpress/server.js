@@ -34,7 +34,7 @@ app.get("/api/users/:id", (req, res)=> {
   res.json(users[req.params.id]);
 });
 
-// receive form data via post request:
+// create: receive form data via post request & add to db:
 app.post("/api/users", (req, res)=> {
   // req.body contains form data from client
   console.log(req.body);
@@ -44,7 +44,13 @@ app.post("/api/users", (req, res)=> {
   res.json({status: "ok"});
 });
 
-
+// update: receive form data via post request & update matching object in db
+app.put("/api/users/:id", (req, res) => {
+  // replace prev object with req data:
+  users[req.params.id] = req.body;
+  // send response
+  res.json({status: ok});
+});
 
 const server = app.listen(port, () =>
   console.log(`Server is locked and loaded on port ${server.address().port}!`)
