@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
 		minlength: [2, "{PATH} must be at least 2 characters long."]
 	},
 	last_name: {
-		type: Number,
+		type: String,
 		required: [true, "{PATH} is required."],
 		minlength: [2, "{PATH} must be at least 2 characters long."]
 	},
