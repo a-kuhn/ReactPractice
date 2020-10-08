@@ -15,6 +15,11 @@ module.exports = {
             .catch(err => res.json({message: "Something went wrong", error: err}));
     },
 
+    //get a random joke
+    getRandomJoke(req, res) {
+        
+    },
+
     //create a joke
     createJoke(req, res) {
         Joke.create(req.body)
