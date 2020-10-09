@@ -3,10 +3,10 @@ const JokesController = require('../controllers/jokes.controller');
 module.exports = app => {
     //get all jokes
     app.get("/api/jokes", JokesController.getAllJokes);
-    //get single jokes
-    app.get("/api/jokes/:id", JokesController.getSingleJoke);
     //get random joke
     app.get("/api/jokes/random", JokesController.getRandomJoke);
+    //get single jokes
+    app.get("/api/jokes/:id", JokesController.getSingleJoke);
     //create new joke
     app.post("/api/jokes/new", JokesController.createJoke);
     //update existing joke
