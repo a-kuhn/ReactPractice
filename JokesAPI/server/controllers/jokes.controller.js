@@ -18,7 +18,9 @@ module.exports = {
     //get a random joke
     getRandomJoke(req, res) {
         let randNum = 0;
+        // pick a random number between 0 and the # of jokes in the db:
         Joke.countDocuments({}, (err, count)=>{randNum = parseInt(Math.floor(Math.random()*count));})
+            // pull all the jokes from the db and return the randNum*th joke
             .then(()=>{
                 Joke.find()
                     .then(allJokes => res.json({randomJoke : allJokes[randNum]}))
