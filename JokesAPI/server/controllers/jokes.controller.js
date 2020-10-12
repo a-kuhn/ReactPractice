@@ -17,17 +17,14 @@ module.exports = {
 
     //get a random joke
     getRandomJoke(req, res) {
-        console.log("getting a random joke...");
-        Joke.find()
-            .then(
-                r => {
-                    const allJokes = r;
-                    const jokesCount = length(allJokes);
-                    const randNum = parseInt(Math.floor(Math.random()*jokesCount));
-                    const randJoke = allJokes[randNum];
-                    res.json({joke: randJoke});
-                })
-            .catch(err => res.json({ message: "Something went wrong", error: err }));
+        let randNum = 0;
+        Joke.countDocuments({}, (err, count)=>{randNum = parseInt(Math.floor(Math.random()*count));})
+            .then(()=>{
+                Joke.find()
+                    .then(allJokes => res.json({randomJoke : allJokes[randNum]}))
+                    .catch(err => res.json({message: "Something went wrong.", error: err}));
+            })
+            .catch(err => res.json({message: "Something went wrogn", error: err}));
     },
 
     //create a joke
